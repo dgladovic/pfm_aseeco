@@ -1,0 +1,79 @@
+<div class="title"  mat-dialog-title>
+    <h1>Split transaction</h1>
+  </div>
+  
+  <div id="body"  mat-dialog-content>
+
+    <div class="info-tekst">
+      <p id="info">Please split the transaction to categories:</p>
+    </div>
+
+    <div class="category">
+      <mat-form-field class="ff" appearance="outline">
+        <mat-label class="ff-tekst">Choose category</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <div class="category">
+    <mat-form-field class="ff" appearance="outline">
+      <mat-label class="ff-tekst">Choose subcategory (optional)</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+
+  <div class="amount-container">
+    <mat-form-field class="ac" appearance="outline">
+      <mat-label class="ac-tekst">Enter amount for this category</mat-label>
+        <input matInput style="color:  #00ace8; background-color: white;">
+    </mat-form-field>
+ </div>
+
+ <div class="divider">
+    <p>Remove this category</p>
+        <button mat-mini-fab id="remove"> <mat-icon id="rem-ic">remove</mat-icon> </button>
+</div>
+ 
+
+ <div class="category">
+    <mat-form-field class="ff" appearance="outline">
+      <mat-label class="ff-tekst">Choose category</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="category">
+  <mat-form-field class="ff" appearance="outline">
+    <mat-label class="ff-tekst">Choose subcategory (optional)</mat-label>
+    <mat-select>
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+<div class="amount-container">
+  <mat-form-field class="ac" appearance="outline">
+    <mat-label class="ac-tekst">Enter amount for this category</mat-label>
+      <input matInput style="color:  #00ace8; background-color: white;">
+  </mat-form-field>
+</div>
+
+ </div>
+
+
+
+  
+  <div class="buttons"  mat-dialog-actions >
+    <button mat-button mat-dialog-close id="cancel">Cancel</button>
+    <button mat-button mat-dialog-close id="apply"   cdkFocusInitial>Apply</button>
+  </div>

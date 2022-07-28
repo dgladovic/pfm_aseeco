@@ -1,0 +1,30 @@
+
+<div >
+  <mat-sidenav-container  class="site-container">
+    <mat-sidenav #sidenav
+                
+                 [opened]="true"
+                 class="site-sidenav"
+                 mode="side"
+                 opened>
+      <img class="company-logo" src="https://www.emotion-24.de/media/37/8e/5e/1645431977/Emotion_Logo_2022_Wei%C3%9F_Orange.svg"/>
+      <nav class="nav nav-pills">
+        <mat-accordion class="field-container button" >
+          <div  class="item-conteiner" *ngFor="let parent of parentMenuItems" >
+            <mat-panel-title class="item-title"  >
+              <button mat-icon-button >
+                <mat-icon aria-label="Example icon-button with a heart icon">{{ parent.icon }}</mat-icon>
+              </button>
+              <span class="mat-expansion-panel-header-text" >{{ parent.title }}</span>
+            </mat-panel-title>
+          </div>
+          
+        </mat-accordion>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content >
+      <router-outlet class="site-router-outlet-content"></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container> 
+  
+</div>

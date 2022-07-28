@@ -1,0 +1,247 @@
+.site-container {
+  position: absolute;
+  top: 0px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  border: solid 1px red
+}
+
+.site-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  /*width: min-content;*/
+  background: white;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.site-router-outlet-conten {
+  padding: 50px;
+}
+
+.nav-link {
+  margin-left: 30px;
+}
+
+.nav button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 0 10px 10px;
+  /*padding-left: 20px;*/
+  width: 160px;
+}
+
+.nav button:hover {
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.nav button:focus {
+  outline-color: white;
+}
+
+.nav[_ngcontent-hsx-c0] button[_ngcontent-hsx-c0] {
+  margin-top: 10px;
+  padding: 10px 10px 10px 20px;
+  width: 150px;
+}
+
+.nav button,
+.nav[_ngcontent-hsx-c0] button[_ngcontent-hsx-c0] {
+  border: 1px solid transparent;
+  background: white;
+  color: #353535;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  text-align: left;
+}
+
+.field-container Button:hover,
+.field-subcontainer Button:hover {
+  /*-webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.35);*/
+  border-bottom: 1px solid #ACACAC;
+}
+
+.field-container Button:focus,
+.field-subcontainer Button:focus {
+  outline-color: white;
+}
+
+/* Menu Buttons - End */
+
+/* Menu Buttons Untermenü - Start */
+
+.subfunction-content {
+  position: absolute;
+  top: 30px;
+  left: 190px;
+  width: calc(100% - 230px);
+  height: calc(100% - 100px);
+  z-index: -1;
+}
+
+.subcat-field {
+  display: none;
+  border: 1px solid #353535;
+  margin-top: 5px;
+  border-radius: 5px;
+  background: linear-gradient(#535353, #353535);
+}
+
+.subcat-field ul {
+  list-style-type: none;
+  padding-left: 8px;
+}
+
+.subcat-field li {
+  color: #fff;
+  transition: all 200ms ease;
+}
+
+.subcat-field li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Menu Buttons Untermenü - End */
+
+.nav button.mat-raised-button {
+  line-height: 12px;
+  /*color: rgba(0,0,0,.87);*/
+  background-color: #fff;
+}
+
+.mat-expansion-panel-header {
+  background: white;
+  color: #353535;
+  padding: 0 40px 0 20px !important;
+  border-radius: 0;
+}
+
+.mat-expansion-panel-header span {
+  padding-top: 3px;
+}
+
+.mat-expansion-panel {
+  background: white;
+  /*margin: 0 10px;*/
+  width: fit-content !important;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+.item-conteiner  {
+  background: white;
+  /*margin: 0 10px;*/
+  width: fit-content !important;
+  width: 100% !important;
+  margin-bottom: 5px;
+}
+
+.item-title {
+  background: white;
+  color: #353535;
+  margin-top: 3px;
+  margin-left: 5px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+
+.item-title button {
+  background-color: #00ace8;
+  border-radius: 50%;
+  width: 30px;
+  height:30px;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.item-title button .mat-icon {
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.item-title span {
+  margin-left: 10px;
+  align-items: center;
+
+}
+
+
+.mat-expansion-panel button{
+  width: calc(100% - 10px);
+  overflow-x: hidden;
+  box-shadow: none !important;
+  border: 1px solid transparent;
+  border-radius: 0px;
+}
+
+.mat-accordion .mat-expansion-panel:last-of-type,
+.mat-accordion .mat-expansion-panel:first-of-type{
+  border-radius: 0;
+}
+
+.mat-expansion-panel:not{
+  box-shadow: none !important;
+}
+
+.field-subcontainer .mat-expansion-panel-header {
+  padding: 0 10px !important;
+}
+
+.field-subcontainer .mat-expansion-panel {
+  margin-top: 10px;
+}
+
+.mat-expansion-panel-spacing {
+  margin: 0 0;
+}
+
+.nav button.selected-menu-item,
+.nav[_ngcontent-hsx-c0] button[_ngcontent-hsx-c0].selected-menu-item {
+  background-color: #eee;
+}
+
+.soas-custom-icon{
+  font-size: 18px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  color: #535353;
+}
+
+
+.company-logo{ 
+  height: 26px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}

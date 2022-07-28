@@ -1,0 +1,153 @@
+.first-box  {
+  width: 100%;
+  background-color: #ecece4;
+  flex-direction: column;
+
+}
+
+.second-box   {
+  background-color: #ecece4;
+  
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+ 
+}
+
+
+
+
+.second-conteiner  {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left:  70px;
+  
+}
+
+::ng-deep mat-grid-tile .test {
+  position: absolute;
+  top: 40px;
+}
+
+::ng-deep mat-grid-tile .second-conteiner {
+  position: absolute;
+  top: 40px;
+}
+
+.test {
+  width: 80%
+}
+
+.main-conteiner {
+  height: 800px;
+  border: solid 1px green;
+  background-color: #ecece4;
+
+
+}
+
+
+.button-conteiner   {
+    width: 80%;
+    height: 30px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.button-conteiner   span  {
+  color:  #00ace8;
+  padding-left: 20px;
+}
+
+
+.button-conteiner   button  {
+  color:  #00ace8;
+  padding-left: 10px;
+
+
+}
+
+.input-conteiner  {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-conteiner {
+  width: 500px;
+  background-color: green;
+  border: solid 1px red
+}
+
+.example-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  
+}
+
+.header  {
+  background: linear-gradient(
+    120deg,
+    #00496a,
+    transparent 45%,
+    
+    rgb(167, 239, 167) 55%,
+    transparent 100%
+  );
+  height: 150px;
+  
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-header-image {
+  margin-left: 20px;
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  width: 80px;
+  height: 80px
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  color: #00ace8;
+  min-width: 140px !important;
+  border-color: #00ace8 !important;
+}
+
+::ng-deep .mat-tab-label  {
+  color: white;
+  border-bottom: none;
+}
+
+
+.mat-tab-label[_ngcontent-c19]  {
+  color: white;
+}
+
+
+::ng-deep .mat-ink-bar {
+  background-color: #00ace8 !important;
+  display: none;
+  }
+
+
+
+.headerContent  {
+  height:  48px;
+  background-color: #00496a;
+}
+
+.menu-title  {
+  height:  48px;
+  background-color: #00ace8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.titleConte {
+  height: 40px;
+  background-color: white;
+}

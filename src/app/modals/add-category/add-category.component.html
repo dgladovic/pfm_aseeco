@@ -1,0 +1,31 @@
+<div class="title"  mat-dialog-title>
+  <h1>Choose category</h1>
+</div>
+
+<div id="body"  mat-dialog-content>
+  <div class="info-tekst">
+    <p>You have selected 5 transactions, for multiple categorization</p>
+  </div>
+  <div class="category">
+    <mat-form-field class="ff" appearance="outline">
+      <mat-label class="ff-tekst">Choose category</mat-label>
+      <mat-select (selectionChange)="changeClient($event.value)">
+        <mat-option  *ngFor="let cat of mainCat" value = "{{cat.code}}" (click)="subCatCheck(mCat)">{{cat.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="category" >
+  <mat-form-field class="ff" appearance="outline" >
+    <mat-label class="ff-tekst">Choose subcategory (optional)</mat-label>
+    <mat-select >
+      <mat-option *ngFor="let set of truncCat" value = "{{set.name}}">{{set.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+</div>
+
+<div class="buttons"  mat-dialog-actions >
+  <button mat-button mat-dialog-close id="cancel">Cancel</button>
+  <button mat-button mat-dialog-close id="apply" cdkFocusInitial>Apply</button>
+</div>

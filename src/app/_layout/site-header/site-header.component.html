@@ -1,0 +1,23 @@
+<mat-toolbar  class="app-header">
+  <div class="menu-navigation">
+    <ul class="navigation-list">
+      <span *ngFor="let item of navItems">
+        <!-- Handle branch node buttons here -->
+        <span *ngIf="item.children && item.children.length > 0">
+          <button id="{{item.id}}" mat-button [disabled]="item.disabled">
+            <mat-icon>{{item.iconName}}</mat-icon>
+           displayName 
+          </button>
+         
+        </span>
+        <!-- Leaf node buttons here -->
+        <!--<span *ngIf="!item.children || item.children.length === 0">
+          <button mat-button color="primary" [routerLink]="item.route">
+            {{item.displayName | soasTranslateIt}} test
+          </button>
+        </span>-->
+      </span>
+      <img class="company-logo" src="https://www.emotion-24.de/media/37/8e/5e/1645431977/Emotion_Logo_2022_Wei%C3%9F_Orange.svg"/>
+    </ul>
+  </div>
+</mat-toolbar>

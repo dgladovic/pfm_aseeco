@@ -1,0 +1,152 @@
+<app-site-header  class="site-header"></app-site-header>
+<mat-grid-list cols="4"  rowHeight="fit" class="main-conteiner">
+  <mat-grid-tile colspan='3' class="first-box; " style="overflow-y:visible">
+    <div class="test">
+      <h1  style="color: #00ace8">Financial overview</h1>
+      <div class="header" >
+        <div  style="display: flex; ">
+            <div mat-card-avatar class="example-header-image"></div>
+            <div style="display:flex;  flex-direction:column">
+                <h1 style="margin-left: 20px;color:  white;  margin-bottom: 0px;">Current account</h1>
+                <p  style="margin-left: 20px;color:  white">1234 56678 8890</p>
+            </div>
+        </div>
+        <div style="display: flex;  margin-right: 20px;  ">
+          
+          <div style="display:flex;  flex-direction:column">
+              <h1 style="margin-left: 20px;color:  white;  margin-bottom: 0px;">12,340.000,00 RSD</h1>
+              <p  style="margin-left: 20px;color:  #00ace8">Available balance</p>
+          </div>
+        </div>
+      </div>
+      <div  class="headerContent">
+        <mat-tab-group  class="tab-group">
+          <mat-tab label="EXECUTED" style="color: white;">  </mat-tab>
+          <mat-tab label="REJECTED">  </mat-tab>
+          <mat-tab label="FUTURE"> </mat-tab>
+          <mat-tab label="DRAFT"> </mat-tab>
+          <mat-tab label="PADDING"> </mat-tab>
+        </mat-tab-group>
+      </div>
+      <div  class="menu-title">
+          <p style="color:  white">CHOOSE VIEW:</p>
+          <mat-icon style="margin-bottom: 20px; margin-left: 20px;  color:  white; font-size: 32px">menu</mat-icon>
+          <mat-icon style="margin-bottom: 12px; margin-left: 20px;  ">menu</mat-icon>
+          <mat-icon style="margin-bottom: 12px; margin-left: 20px;  ">menu</mat-icon>
+          <mat-icon style="margin-bottom: 12px; margin-left: 20px;  ">menu</mat-icon>
+          <mat-icon style="margin-bottom: 12px; margin-left: 20px;  ">menu</mat-icon>
+          <mat-icon style="margin-bottom: 12px; margin-left: 20px;  ">menu</mat-icon>
+          <mat-icon style="margin-bottom: 12px; margin-left: 20px;  ; margin-right: 20px;">menu</mat-icon>
+      </div>
+      <div class="titleConte">
+
+      </div>
+      <div>
+        <mat-card style="border-radius: 0px; margin-top: 10px;" *ngFor="let card of cardList" id="{{ card.id }}" >
+          <mat-card-header style="  width: 100%">
+            <div style=" display: flex; "  >
+                <div mat-card-avatar class="example-header-image"></div>
+                <div style="flex-direction: column; margin-left: 10px;" >
+                    <mat-card-title>{{ card['beneficiary-name'] }}</mat-card-title>
+                    <mat-card-subtitle>{{ card.date }}</mat-card-subtitle>
+                </div>
+            </div>
+            <div style="justify-content: flex-end; display: flex; position: absolute; right: 5%">
+              <div style="display: flex; flex-direction: column">
+                  <mat-card-title style="color: #00ace8 ;">{{ card.amount }}</mat-card-title>
+                  <mat-card-title style="display: flex; justify-content: flex-end">Lokacija/ikonica</mat-card-title>
+              </div>
+          </div>  
+          </mat-card-header>
+          <mat-card-footer style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 10px">
+            <button mat-button  style="margin-left: 45px; background-color:grey; width: 20%; display:flex; justify-content: center; color:white" (click)="addCat()">Add category</button>
+            <button mat-button  style="background-color:#00ace8; width: 20%; display:flex; justify-content: center; color:white" (click)="splitCat()">Split transaction</button>
+          </mat-card-footer>
+        </mat-card>
+      </div>  
+    </div>
+
+  </mat-grid-tile>
+  <mat-grid-tile colspan='1' class="second-box">
+      <div  class="second-conteiner">
+        <div  class="button-conteiner"  *ngFor="let button of buttonItems" >
+          <button mat-icon-button >
+            <mat-icon aria-label="Example icon-button with a heart icon">{{ button.icon }}</mat-icon>
+            <span class="mat-expansion-panel-header-text" >{{ button.title }}</span>
+          </button>
+        </div>
+        <div style="margin-top: 40px">
+          <label style="margin-bottom: 0px;color:  #00ace8">Period</label>
+            <div  class="input-conteiner"  style="font-size: 10px;">
+                <label >FROM</label>             
+                <mat-form-field appearance="outline">
+                  <input matInput [matDatepicker]="picker1" style="color:  #00ace8">
+                
+                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                  <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+                <label >TO</label>             
+                <mat-form-field appearance="outline">
+                  <input matInput [matDatepicker]="picker2"   style="color:  #00ace8">
+                
+                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                  <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div> 
+        <div style="margin-top: 10px">
+          <label style="margin-bottom: 0px;color:  #00ace8">TRANSACTION TYPE</label>
+            <div  class="input-conteiner"  style="font-size: 10px;">
+              <mat-form-field appearance="outline"  >
+                <mat-label>Favorite food</mat-label>
+                <mat-select >
+                  <mat-option  >
+                    test
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+                
+            </div>
+        </div> 
+        <div style="margin-top: 10px">
+          <label style="margin-bottom: 0px;color:  #00ace8">FILTER BY ACCOUNT</label>
+            <div  class="input-conteiner"  style="font-size: 10px;">
+              <mat-form-field appearance="outline"  >
+                <mat-label>Favorite food</mat-label>
+                <mat-select >
+                  <mat-option  >
+                    test
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+                
+            </div>
+        </div>
+        <div style="margin-top: 10px">
+          <label style="margin-bottom: 0px;color:  #00ace8">BENEFICIER</label>
+            <div  class="input-conteiner"  style="font-size: 10px;">
+              <mat-form-field appearance="outline"  >
+                <input matInput style="color:  #00ace8">
+                <!---<mat-icon style="height: 20px;">search</mat-icon>--->
+              </mat-form-field>
+                
+            </div>
+        </div>
+        <mat-divider style="width: 80%"></mat-divider>
+        <div style="margin-top: 15px">
+          <button mat-button style="background-color: green; width: 80%; color: white;" >
+            <span class="mat-expansion-panel-header-text" >Filter transactions</span>
+          </button>
+        </div>
+        <div style="margin-top: 15px">
+          <button mat-button style="background-color: #00ace8; width: 80%; color: white;" >
+            <span class="mat-expansion-panel-header-text" >Clear selections</span>
+          </button>
+        </div>
+      </div>
+
+      
+ 
+  </mat-grid-tile>
+
+</mat-grid-list>
